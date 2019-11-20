@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+      "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+      "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+   <constant name="struts.devMode" value="true"/>
+   <constant name="struts.i18n.encoding" value="UTF-8"/>
+   <constant name="struts.locale" value="zh_CN"/>
+   <constant name="struts.action.excludePattern" value="/AppManager"/>
+   <constant name="struts.action.excludePattern" value="/index.html"/>
+
+   <package name="LoginAction" extends="struts-default">
+      <action name="LoginAction" class="services.LoginAction" method="execute">
+         <result name="success">index.html</result>
+         <result name="error">/webresources/login.html</result>
+      </action>
+   </package>
+</struts>
